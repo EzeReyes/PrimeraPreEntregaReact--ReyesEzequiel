@@ -15,131 +15,52 @@
 
 
 
-// PUNTO A Y B
+// PUNTO A 
 const email="ese"
-const contra= "aa"
+const contra= "ll"
 let nombreUsuario = prompt ("Ingrese su nombre de usuario")
 let usuarioConEmail= prompt ("Ingrese su email")
 let contrasenia = prompt ("Ingrese su contraseña")
 const valida = () => {
-if (email != usuarioConEmail && contra !=contrasenia) {
-    return ("Su usuario y contraseña son erroneos")
+while (email != usuarioConEmail && contra != contrasenia) {
+    alert ("Su usuario y contraseña son erroneos")
+    usuarioConEmail = prompt ("Ingrese un email válido")
+    contrasenia = prompt ("Ingrese contraseña correcta")
 } 
- if (email!= usuarioConEmail) {
-    return ("Su usuario es erroneo")
+
+while (email != usuarioConEmail) {
+alert ("Su usuario es incorrecto")
+usuarioConEmail = prompt ("Ingrese un email válido")
 }
-else if (contra!=contrasenia) {
-    return ("Su contraseña es erronea")
-}
-else {
-    alert ("Bienvenido " + `${nombreUsuario}`) 
+
+while (contra != contrasenia) {
+alert ("Su contraseña es incorrecta")
+contrasenia = prompt ("Ingrese contraseña correcta")
 }
 }
 console.log(valida())
 
-
-
 // PUNTO B
-/* 
-const saludo = () => {
-if (valida()===true) {
-alert("Bienvenido " + `${nombreUsuario}`) }
-}
-console.log(saludo())
- */
-
-
-
+const saludar = () => {
+        alert ("Bienvenido " + `${nombreUsuario}`)
+    }
+console.log(saludar ())
 
 // PUNTO C
-const arroba = () => {
-    for (i=0; i<email.length; i++) {
-         if (email[i].match(/[@]/)) {
-            alert ("ok")}
-            else {
-                let usuarioConEmail = prompt("Ingrese un nuevo email")
-                break
-            }
-    }
-
-}
-console.log(arroba())
-
-
-const validacionDeContraseña = () => {
-        if (contra.length<8) {
-        } else {
-            alert ("Su contraseña es insegura")
+const validarArroba = () => {
+    for ( i=0; i<usuarioConEmail.length; i++){
+        if (usuarioConEmail[i]==="@") {
+        }
+         else {
+         usuarioConEmail = prompt ("Ingrese un nuevo email")
         }
     }
-console.log(validacionDeContraseña())
-
-
-const validacionNumerica = ( ) => {
-    for (i=0; i<contra.length; i++) {
-        if (contra[i].match(/[0-9]/)) {
-           }
-           else {
-               let resp=confirm("Su contraseña debe tener caracteres alfanuméricos. Desea cambiarla?") 
-        if (resp==true)
-        prompt ("Ingrese su nueva contraseña aquí")
-               break
-    }
 }
-}
-console.log(validacionNumerica())
+console.log(validarArroba())
+    
+
+// PUNTO D 
 
 
 
-///////////////////////////////// HEROES
 
-// 2) GENERE 6 VARIABLES PARA DOS CHARACTERS DIFERENTES: tipoDeHeroe, danioBase y vidaBase (para el héroe). Para el enemigo: tipoDeMonstruo, danioMostruoBase y vidaMonstruoBase. tipoDeHeroe y tipoDeMonstruo tiene un string vacío como valor, danioMonstruoBase, danioBase, vidaMonstruoBase y vidaBase valen cero como valor. Use variables que puedan ser reasignadas.
-
-///////////////////////////////// para interactuar con el usuario
-
-// TODOS LOS PUNTOS TIENEN QUE HACERSE CON FUNCIONES. CADA PUNTO PUEDE EXPRESARSE COMO UNA FUNCIÓN. LAS RESPONSABILIDADES DEBEN ESTAR SEPARADAS. UTILICE FUNCIONES QUE RECIBAN PARÁMETROS Y PASE ARGUMENTOS EN LA LLAMADA.
-
-// a) Genere 1 prompt y pregúntele al usuario: "¡Desea crear un mago, guerrero o tanque?". En el caso de que elija mago, la vida que se le asignará a vidaBase será de 225, en el caso de que elija guerrero 300 y tanque 450. Para danioBase: mago --> 150, guerrero ---> 80 y tank ---> 50.
-// b) Genere 1 prompt y pregúntele al usuario: "¡Desea crear un gobling, orco o demonio?". Para la variable de vidaMonstruoBase: en el caso de que elija gobling: 180, en el caso de que elija orco 350 y demonio: 450. Para danioMonstruoBase: gobling --> 70, orco ---> 130 y demonio ---> 110.
-// c) Con un bucle, genere 3 encuentros entre los contrincantes. Usando las estadísticas de los personajes, se deberán registrar los movimientos mediante cada iteración: `El ${heroe} ha atacado al ${monstruo}, por ${x} de daño. El monstruo ha perdido ${x} puntos de vida`. También en el caso del monstruo: `El ${monstruo} ha atacado al ${heroe}, por ${x} de daño. El heroe ha perdido ${x} puntos de vida`.
-// d) mediante una estructura condicional, valide la vida del héroe y del monstruo. Si alguno de ellos llega a 0 o menos de vida, entonces detenga la iteración del ciclo. Eso se puede con el uso de break dentro del bucle. Antes de detener la iteración, envíe un mensaje en consola: `El ${x} ha caído. El ganador del encuentro es: ${y}`
-// e) EN EL CASO DE QUE NO MUERA NINGUNO, VERIFICAR QUIÉN ES EL QUE TIENE MÁS VIDA. ENVIAR UN MENSAJE EN CONSOLA QUE AVISE QUIÉN FUE EL GANADOR DEL ENCUENTRO
-// F) SI TIENEN LA MISMA VIDA, ENVIAR UN MENSAJE EN CONSOLA QUE MUESTREN QUE EMPATARON.
-
-let tipoDeMonstruo = "";
-let tipoDeHeroe = "";
-let danioBase= 0;
-let danioMonstruoBase = 0;
-let vidaBase = 0;
-let vidaMonstruoBase = 0;
-const personajesHeores = (personaje) => {
-    personaje =prompt ("¡Desea crear un mago, guerrero o tanque?")
-    if (personaje == "mago") {
-              vidaBase = 225;
-        return danioBase = 70; 
-    }
-    else if (personaje == "guerrero") {
-        vidaBase = 300;
-        return danioBase = 150;
-    }
-    else if (personaje == "tanque") {
-        vidaBase = 450;
-       return danioBase = 50;
-    }
-}
-
-const personajesMonstruos = (personaje) => {
-    personaje =prompt ("¡Desea crear un gobling, orco o demonio?")
-    if (personaje == "gobling") {
-              vidaMonstruoBase = 180;
-        return danioMonstruoBase = 150; 
-    }
-    else if (personaje == "orco") {
-        vidaMonstruoBase = 350;
-        return danioMonstruoBase = 80;
-    }
-    else if (personaje == "demonio") {
-        vidaMonstruoBase = 450;
-       return danioMonstruoBase = 50;
-    }
-}
