@@ -16,7 +16,7 @@
 
 
 // PUNTO A 
-const email="ese"
+const email="ese.rey@gmail.com"
 const contra= "ll"
 let nombreUsuario = prompt ("Ingrese su nombre de usuario")
 let usuarioConEmail= prompt ("Ingrese su email")
@@ -46,21 +46,44 @@ const saludar = () => {
     }
 console.log(saludar ())
 
-// PUNTO C
-const validarArroba = () => {
-    for ( i=0; i<usuarioConEmail.length; i++){
-        if (usuarioConEmail[i]==="@") {
+// PUNTO C   
+function validarArroba (emailI) {
+    const letra="@"
+    let validar=false
+    for (let i=0; i<emailI.length; i++){
+        if (emailI[i]===letra) {
+            validar=true
         }
-         else {
-         usuarioConEmail = prompt ("Ingrese un nuevo email")
+        else {
+            emailI = prompt ("Ingrese un email válido")
         }
-    }
+    } 
+    return validar
 }
-console.log(validarArroba())
-    
+console.log(validarArroba("emailIngresado"));  
+
 
 // PUNTO D 
 
+const validarContrasenia = () => {
+    for (let i=0; i<contrasenia.length; i++ ) {
+        if (contrasenia.length===8) {
+    } else {
+        alert("Su contraseña es insegura")
+        break
+    }
+    }
+}
+console.log(validarContrasenia())
 
-
-
+// PUNTO E 
+let resp = "si"
+const cambiarContraseña = () => {
+ for (let i=0; i<contrasenia.length; i++)
+    if (contrasenia[i].match(/[0-9]/)) {
+         resp = prompt ("Su contraseña debe tener caracteres alfanuméricos. Desea cambiarla?")
+    }
+    if (resp==="si") {
+    contrasenia = prompt("Ingrese su nueva contraseña")}
+}
+console.log(cambiarContraseña())
