@@ -1,0 +1,304 @@
+.gridCarrito {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+        "navb navb navb"
+        "nov nov nov"
+        "car car car"  
+        "wav wav vist"
+        "foot foot foot";
+}
+.novedades {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    flex-direction: column;
+    .novedades__cont {
+        padding: 2rem;
+        grid-area: nov;
+        width: 40rem;
+    }
+    .novedades__título {
+        color: #dddddf;
+        font-size: 2rem;
+        padding: 1rem;
+        h3 {
+        text-shadow: rgba(5, 86, 223, 0.5) 0 4rem 3rem;
+        text-transform: capitalize;
+        font-size: 5rem;
+        margin-bottom: 4rem;
+        }
+        }
+    }
+
+.compra {
+    height: 5rem;
+    background-color:#626263;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    span {
+        display: block;
+        white-space: nowrap;
+        color: #dee7f3;
+        border-right: 5px solid #dee7f3;
+        width: 39ch;
+        animation: escribir 5s steps(43),
+        parpadeo 0.4s infinite alternate;
+        overflow:hidden ;
+        }
+        @keyframes escribir {
+        from {
+            width: 0;
+            }
+        }
+        @keyframes parpadeo {
+            70% {
+            border-color: transparent;
+            }
+        }
+    }
+
+.carrito {
+    display: grid;
+    grid-area: car;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #111112a8;
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+    border: 1rem solid;
+    div {
+        display: flex;
+        flex-direction: column;
+        width: 15rem;
+        height: auto;
+        border-radius: 1rem;
+        .carrito__titulo {
+        text-align: center;
+        color: #dee7f3;
+        font-style: oblique;
+        font-weight: 900;
+    }
+        .carrito__botones {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 1rem;
+        }
+        img {
+            border-radius: 1rem;
+            cursor: pointer;
+            }
+        h3 {
+        font-size: 1rem;
+        color: #000000;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    }
+}
+
+        .btnCompra{
+            font-size: 1rem;
+            padding: 0.5rem;
+            width: max-content;
+            text-align: center;    
+            height: 2.5rem;
+            border-radius: 0.7rem;
+            background-color: #dddddf;
+            p {
+                color: #000000;
+            }
+        }
+    
+        .btnCompra:hover {
+            background: black;
+            text-decoration: none;
+        p {
+            color: white;
+        }
+    }
+
+    .carrito div:active > img {
+        transform: scale(1.2);
+        box-shadow: 0 0.5rem 1rem 0.5rem rgba(5, 86, 223, 0.5);
+        }
+
+    .wave {
+        grid-area: wav;
+        display: flex;
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.267), rgba(255, 255, 255, 0.39)), url("../img/carrito/productos/11banner.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        text-align: center;
+        height: 15rem;
+        align-items: center;
+        justify-content: center;
+        h3 {
+            font-size: 5rem;
+            color: #dddddf;
+        }    
+    }
+        .wave:hover {
+            background-color: #dddddf;
+            h3 {
+                color: #000000;
+                text-shadow:rgb(255 255 255) 0 0 1rem;    
+                text-decoration: underline;  
+                    }  
+            }
+
+            .vistaPreviaCarrito {
+                grid-area: vist;
+                display: flex;
+                flex-direction: column;
+                background: white;
+                text-align: center;
+                height: 15rem;
+                align-items: center;
+                justify-content: center;
+                h5 {
+                    font-size: 1rem;
+                    color: #0f0f0f;
+                }    
+            }
+
+    @media (min-width: 577px) and (max-width: 835px) {
+
+        .gridCarrito {
+            display: grid;
+            height: 100vh;
+            grid-template-areas: 
+                "navb"
+                "nov"
+                "car"  
+                "wav"
+                "foot";
+            grid-template-columns: 100vw;
+        }
+        
+        .novedades {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000000;
+            flex-direction: column;
+            .novedades__cont {
+                padding: 2rem;
+                grid-area: nov;
+                width: 40rem;
+            }
+            .novedades__título {
+                color: #dddddf;
+                font-size: 2rem;
+                padding: 1rem;
+                h3 {
+                text-align: center;
+                text-shadow: rgba(5, 86, 223, 0.5) 0 4rem 3rem;
+                text-transform: capitalize;
+                font-size: 5rem;
+                margin-bottom: 4rem;
+                }
+                }
+            }
+        
+        .compra {
+            height: auto;
+            background-color:#626263;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            span {
+                display: block;
+                white-space: nowrap;
+                color: #dee7f3;
+                border-right: 5px solid #dee7f3;
+                width: 39ch;
+                animation: escribir 5s steps(43),
+                parpadeo 0.4s infinite alternate;
+                overflow:hidden ;
+                }
+                @keyframes escribir {
+                from {
+                    width: 0;
+                    }
+                }
+                @keyframes parpadeo {
+                    70% {
+                    border-color: transparent;
+                    }
+                }
+            }
+        
+        .carrito {
+            display: grid;
+            grid-area: car;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            background-color: #111112a8;
+            gap: 1rem;
+            justify-items: center;
+            padding: 1rem;
+            border: 1rem solid;
+        }
+    }
+    @media (min-width: 325px) and (max-width: 576px) {
+
+        .gridCarrito {
+            display: grid;
+            height: 100vh;
+            grid-template-areas: 
+                "navb"
+                "nov"
+                "car"  
+                "wav"
+                "foot";
+            grid-template-columns: 100vw;
+        }
+        
+        .novedades {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000000;
+            flex-direction: column;
+            .novedades__cont {
+                padding: 2rem;
+                grid-area: nov;
+                width: 100vw;
+            }
+            h3 {
+                text-align: center;
+            }
+        }
+
+        .compra {
+            height: auto;
+            background-color:#626263;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+        }
+        
+        .carrito {
+            display: grid;
+            grid-area: car;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            background-color: #111112a8;
+            gap: 1rem;
+            justify-items: center;
+            padding: 1rem;
+            border: 1rem solid;
+        }
+
+    }

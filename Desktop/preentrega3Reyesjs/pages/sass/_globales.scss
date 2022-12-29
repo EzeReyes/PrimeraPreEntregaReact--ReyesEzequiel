@@ -1,0 +1,136 @@
+.menu {
+    grid-area: navb;
+    #logout {
+        background-color: transparent;
+    }
+    .logo:hover {   
+        transform:rotateZ(50deg);
+    }
+        .titulo {
+            font-size: 2rem;
+            font-weight:bold;
+            font-variant:small-caps;
+            background: linear-gradient(#47525d,#e9ecef);
+            color: rgba(33, 33, 33, 0.59);
+            align-items: flex-start;
+            margin: 3rem;
+            animation-duration: 10s;
+            animation-name: aparecer;
+            animation-iteration-count:initial;
+            border-radius: 0.5rem;
+            border: inset;
+            }
+            .nav-item{
+            .loguito {
+                width: 2rem;
+                box-shadow: rgb(255, 255, 255) 0 0 1rem;
+                border-radius: 50%;
+            }
+            .loguito:hover {
+                box-shadow: #f1a34a 0 0 2rem;
+                transform: scale(1.2);
+            }
+            .nav-link {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: rgb(255, 255, 255);
+                text-shadow:rgb(255, 242, 242) 0 0 1rem;
+            }
+            .nav-link:hover {
+                color: #f1a34a;
+                text-shadow:#f1a34a 0 0 2rem;
+                text-transform: capitalize;
+            }
+    }
+}
+    @keyframes aparecer {
+        0% {
+        opacity: 0;
+        }
+        100% {
+        opacity:1;
+        }
+        }
+
+        
+    footer {
+        grid-area: foot;
+        background-image: linear-gradient(to top,black,grey);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 4em;
+        p {
+            color:#e9ecef;
+        }
+        .btnred {
+            display: flex;
+            align-items: center;    
+            a {
+                margin: 0 1em;
+            }
+            }
+        .btnred a:hover {
+            transform:rotateZ(5deg);
+            background-color: rgba(14, 15, 15, 0.332);
+            border-radius: 1rem;
+        }
+    }
+
+
+    @media (min-width: 1000px) {
+
+    .nav-link:hover {
+        color: #f1a34a;
+        text-shadow:#f1a34a 0 0 2rem;
+        text-transform: capitalize;
+        transform: scale(1.2);
+    }
+    }
+
+    @media (min-width: 577px) and (max-width: 768px) {
+
+        /* globales */
+        .titulo {
+            display: none;
+        } 
+        footer img {
+            max-block-size: -webkit-fill-available;
+        }
+        
+        footer .btnred {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        footer .btnred a {
+            margin: 0.625rem;
+        }
+        
+        .btnred a img {
+            height: 3rem;
+        }
+    }
+
+          @media (min-width: 325px) and (max-width: 576px) {
+        
+            .titulo {
+                display: none;
+            } 
+            
+            footer {
+                img {
+                    max-block-size: -webkit-fill-available;
+                }
+                btnred {
+                    display: flex;
+                    justify-content: space-around;
+                    a {
+                        margin: 0.625rem;
+                        img {
+                            height: 3rem;
+                            }
+                        }
+                    }
+                }
+            }
+        
