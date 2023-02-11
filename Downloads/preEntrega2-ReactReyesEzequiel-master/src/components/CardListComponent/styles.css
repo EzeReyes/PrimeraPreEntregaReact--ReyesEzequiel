@@ -1,0 +1,12 @@
+.containerProducts {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+
+.elementsContainer {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+}

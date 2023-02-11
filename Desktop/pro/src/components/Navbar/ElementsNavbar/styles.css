@@ -1,0 +1,10 @@
+.title{
+    font-size: 2rem;
+    font-weight: 600;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

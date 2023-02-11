@@ -1,0 +1,12 @@
+.containerElements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.elementsContainer {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+}
