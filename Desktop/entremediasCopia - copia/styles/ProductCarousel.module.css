@@ -1,0 +1,21 @@
+/* styles/ProductCarousel.module.css */
+.product-card {
+    text-align: center;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-image {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 10px;
+  }
+  .product-title {
+    margin: 10px 0;
+  }
+  .product-price {
+    color: #c03d3d;
+    font-weight: bold;
+  }
+  
